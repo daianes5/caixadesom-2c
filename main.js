@@ -1,12 +1,12 @@
+//declaração/ crinado função tocaSomPom
 function tocaSomPom(){
     document.querySelector('#som_tecla_pom').play()    
 }
+//chamando/invocando a função tocaSomPom pelo clique do botão
 document.querySelector('.tecla_pom').onclik = tocaSomPom;
 
-function tocaSomClap(){
-    document.querySelector('#som_tecla_clap').play()    
-}
-document.querySelector('.tecla_clap').onclik = tocaSomClap;
-
+//referência constante listaDeTecla, buscando todos os botões
 const ListaDeTeclas = document.querySelectorAll('.tecla');
-listaDeTeclas[1].onclick = tocaSomClap;
+
+//chamando a função tocaSomPom pela item "0" da listaDeTecla
+listaDeTeclas[0].onclick = tocaSomPom;
